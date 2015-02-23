@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "toolbar.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -167,32 +168,8 @@ void MainWindow::creerInterfaceUser()
 
 
 }
-void MainWindow::creerToolBox()
-{
-    panelOutil = new QVBoxLayout;
-    QLabel *titrebox = new QLabel("OUTILS");
-    QPushButton *crayon = new QPushButton("crayon");
-    crayon->setMaximumWidth(50);
-    QPushButton *gomme = new QPushButton("gomme");
-    gomme->setMaximumWidth(50);
-    QComboBox *tailleCray = new QComboBox;
-    tailleCray->addItem("fin");
-    tailleCray->addItem("normal");
-    tailleCray->addItem("gros");
-    tailleCray->addItem("tres gros");
-    tailleCray->setMaximumWidth(50);
-    QPushButton *dessin = new QPushButton("dessin");
-    dessin->setMaximumWidth(50);
-    QPushButton *decor = new QPushButton("decor");
-    decor->setMaximumWidth(50);
-
-    panelOutil->addWidget(titrebox);
-    panelOutil->addWidget(crayon);
-    panelOutil->addWidget(gomme);
-    panelOutil->addWidget(tailleCray);
-    panelOutil->addWidget(dessin);
-    panelOutil->addWidget(decor);
-
+void MainWindow::creerToolBox(){
+    panelOutil = new RotoToolbar();
 }
 void MainWindow::creerzonedessin()
 {

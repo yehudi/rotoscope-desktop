@@ -19,6 +19,7 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     projet.h \
-    qzonedessin.h
+    qzonedessin.h \
+    toolbar.h
 
 FORMS    += mainwindow.ui
