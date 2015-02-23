@@ -8,6 +8,7 @@
 #include <QLineEdit>
 #include <QComboBox>
 #include <QFileDialog>
+#include <QLabel>
 
 #include <projet.h>
 namespace Ui {
@@ -22,12 +23,18 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void creerMenus();
     void creerActions();
-    void lancement();
+    void creerInterfaceUser();
+    void creerToolBox();
+    void creerzonedessin();
+    void creerzoneoignon();
     ~MainWindow();
 
 public slots:
   void nouveauProjet();
    void parcourirMenu();
+   void lancement();
+   void creerProjet();
+
 private:
     Ui::MainWindow *ui;
 
@@ -46,6 +53,12 @@ private:
     QPushButton *nouveauButt;
     QPushButton *ouvrirButt;
     QLineEdit *nomvideo;
+    QLineEdit *nom;
+
+    /*interface User */
+    QVBoxLayout *panelOutil;
+    QHBoxLayout *zonedessin;
+    QVBoxLayout *zoneoignon;
 };
 
 #endif // MAINWINDOW_H

@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    projet.cpp
+    projet.cpp \
+    qzonedessin.cpp
 
 HEADERS  += mainwindow.h \
-    projet.h
+    projet.h \
+    qzonedessin.h
 
 FORMS    += mainwindow.ui
